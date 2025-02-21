@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find ur_app)/urdf/ur10e.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find ur_app)/urdf/larcc.xacro"/>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ur_app)/config/ur10e.rviz"/>
     <arg name="use_gui" default="true"/>

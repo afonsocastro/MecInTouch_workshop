@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="larcc">
+
+    <xacro:property name="M_PI" value="3.1415926535897931"/>
+
+
+    <xacro:include filename="$(find robotiq_2f_140_gripper_visualization)/urdf/robotiq_arg2f_140_model.xacro" />
+    <xacro:include filename="$(find ur_app)/urdf/ur10e.xacro"/>
+
+    <!-- ####################################### -->
+    <!-- Declare links and joints -->
+    <!-- ####################################### -->
+    <link name="world"/>
+    <!--    Place ur10e robot-->
+    <xacro:ur10e_robot />
+
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <joint name="tool0-FT_sensor_base" type="fixed">
+        <parent link="tool0"/>
+        <child link="FT_sensor_base"/>
+        <origin xyz="0 0 0.007" rpy="0 0 ${M_PI/2}"/>
+    </joint>
+
+
+    <link name="FT_sensor_base">
+        <visual>
+          <geometry>
+            <cylinder length="0.014" radius="0.05"/>
+          </geometry>
+          <material name="metalic_blue">
+            <color rgba="0.0118 0.5176 0.6706 1.0"/>
+          </material>
+        </visual>
+        <collision>
+          <geometry>
+            <cylinder length="0.014" radius="0.05"/>
+          </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="FT_sensor_base-FT_sensor" type="fixed">
+        <parent link="FT_sensor_base"/>
+        <child link="FT_sensor"/>
+        <origin xyz="0 0 0.0215" rpy="0 0 0"/>
+    </joint>
+
+    <link name="FT_sensor">
+        <visual>
+          <geometry>
+            <cylinder length="0.029" radius="0.04"/>
+          </geometry>
+          <material name="metalic_blue">
+            <color rgba="0.0118 0.5176 0.6706 1.0"/>
+          </material>
+        </visual>
+        <collision>
+          <geometry>
+            <cylinder length="0.029" radius="0.04"/>
+          </geometry>
+        </collision>
+    </link>
+
+
+<!--&lt;!&ndash;&lt;!&ndash;        Place gripper&ndash;&gt;&ndash;&gt;-->
+<!--    <xacro:robotiq_arg2f_140 prefix=""/>-->
+
+    <joint name="gripper_joint" type="fixed">
+        <parent link="FT_sensor"/>
+        <child link="robotiq_arg2f_base_link"/>
+        <origin xyz="0 0 0.0215" rpy="0 0 0"/>
+    </joint>
+
+<!--    <link name="end_effector"/>-->
+
+<!--    <joint name="gripper-end_effector" type="fixed">-->
+<!--        <parent link="robotiq_arg2f_base_link"/>-->
+<!--        <child link="end_effector"/>-->
+<!--        <origin xyz="0 0 0.21573113136562894" rpy="0 0 ${-M_PI/2}"/>-->
+<!--    </joint>-->
+</robot>

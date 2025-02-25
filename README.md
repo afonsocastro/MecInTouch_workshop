@@ -76,6 +76,8 @@ Após escolher a sua pose "destino" (a laranja), podemos mandar o manipulador pl
 Chegou o momento de colocarem mãos à obra!
 O objetivo da primeira tarefa de hoje é criarem um script em Python, para controlar o manipulador UR10e, substituindo assim o RViz.
 Para tal, têm um exemplo de rascunho em ```scripts/src/example.py```.
+O melhor será criarem um novo ficheiro, com um nome que vos identifque enquanto grupo de trabalho.
+
 
 Devem usar as funções que estão disponíveis para comandar o robô, bem como a sua garra.
 Podem fazer o que quiserem: 
@@ -86,7 +88,7 @@ Podem fazer o que quiserem:
 - etc
 
 Para tal, deverão usar o que sabem já de programação em python: condições if, ciclos while ou for, tudo está ao vosso dispôr.
-Dica: se quiserem saber valores de juntas de uma determinada posição, podem lançar os 2 comandos anterior que abrem o rviz e vos permitem explorar à vontade!
+Dica: se quiserem saber valores de juntas de uma determinada posição, podem lançar os 2 comandos anteriores (passos 1 e/ou 2) que abrem o rviz e vos permitem explorar à vontade!
 
 Para irem testando como está o processo do vosso script, basta lançarem o Gazebo:
 ````
@@ -104,7 +106,7 @@ https://drive.google.com/drive/folders/13MzDoU4itSrZIgErhY2RknKAz8FXpnGy?usp=dri
 
 Vamos testá-lo no robô real!
 
-Nota: devem procurar pelo vosso script em ```Linux/Ubuntu-20.04/home/[user_name]/catkin_ws/src/MecInTouch_workshop/scripts/src```
+Nota: devem procurar pelo vosso script em ```Linux/Ubuntu_20.04/home/[user_name]/catkin_ws/src/MecInTouch_workshop/scripts/src```
 ## Troubleshoot
 Cada novo script python criado deve conter SEMPRE, na sua primeira linha: ```#!/usr/bin/env python3```. 
 Para além disso, antes de poder ser executado (principalmente quando se inicializa um novo ROS Node), necessita das 2 seguintes permissões:

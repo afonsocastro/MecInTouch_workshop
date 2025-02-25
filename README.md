@@ -1,15 +1,39 @@
 # MecInTouch Workshop Robótica
+![tp0](docs/ur10e.webp)
+
 ## Índice
 
 1. [Pre-requisitos](#pre-requisitos)
 2. [Instalação](#instalação)
+3. [Navegação por comandos em Linux](#navegação-por-comandos-em-linux)
 3. [Pôr o UR10e a mexer!](#pôr-o-ur10e-a-mexer)   
 3. [Troubleshoot](#troubleshoot)
 
 
 ## Pre-requisitos
 
-Entrar no ubuntu (definir user e password)
+1. **Sistema Operativo e Hardware**
+
+SO: Windows 11 (64-bit), qualquer edição.
+Memória RAM: Mínimo de 8GB (pode verificar em “Settings > System > About”).
+
+2. **Instalação do PyCharm Community Edition**
+
+Acedam ao link:  https://www.jetbrains.com/pycharm/download/?section=windows  .
+Atenção: Façam download somente do "Community Edition" (o instalador .exe para Windows). Evitem o "Professional" que aparece no topo da página.
+
+3. **Ativação do WSL (Windows Subsystem for Linux)**
+
+Sigam as instruções neste tutorial:  https://winsides.com/how-to-enable-windows-subsystem-for-linux-in-windows/#how-to-turn-on-windows-subsystem-for-linux-wsl-in-windows-11-quick-steps  .
+Importante: No passo “Turn Windows features on”, certifiquem-se de selecionar as duas opções “Virtual Machine Platform” e “Windows Subsystem for Linux”.
+
+4. **Download do Sistema Operativo Ubuntu**
+
+Abram a Microsoft Store e pesquisem por “Ubuntu 20.04.6 LTS”.
+Procedam ao download desse SO. (Não é necessária nenhuma instalação adicional após o download.)
+
+Entrar no Ubuntu (se for a primeira vez, devem definir user e password).
+
 
 ## Instalação
 No terminal Ubuntu (Linux), correr cada um dos seguintes commandos, um a um:
@@ -47,16 +71,47 @@ cd ~/catkin_ws/
 catkin_make
 ```
 
+## Navegação por comandos em Linux
+Para navegar no sistema Linux, sem uma interface gráfica, iremos usar vários comandos do terminal.
+Lista dos comandos mais habituais para navegar através do terminal:
+
+| Command                  | Description                                                        |
+|--------------------------|--------------------------------------------------------------------|
+| Up Arrow                 | Will show your last command                                        |
+| Down Arrow               | Will show your next command                                        |
+| Tab                      | Will auto-complete your command                                    |
+| clear                    | Will clear the screen                                              |
+| Ctrl + R                 | Will search for a command                                          |
+| exit                     | Will exit the terminal                                             |
+| pwd                      | Lists the path to the working directory                            |
+| ls                       | List directory contents                                            |
+| ls -a                    | List contents including hidden files (Files that begin with a dot) |
+| ls -l                    | List contents with more info including permissions (long listing)  |
+| cd                       | Change directory to home                                           |
+| cd [dirname]             | Change directory to specific directory                             |
+| cd ~                     | Change to home directory                                           |
+| cd ..                    | Change to parent directory                                         | 
+| history                  | Lists all the commands history                                     |
+| ![cmd_num]               | Execute the command number [cmd_num] listed in *history*           |
+| python3 [name_file].py   | Execute the python3 script                                         |
+
+
 ## Pôr o UR10e a mexer!
 ### 1. Lançar o RViz para controlar as 6 juntas do Manipulador, através da interface:
 ````
 roslaunch scripts rviz_larcc.launch
 ````
+![tp1](docs/rviz_logo.png)
+
 Para melhor entendermos todo o sistema, devemos saber que o RViz é o controlador do robô (atuador nos motores elétricos das várias juntas, que o fazem mexer). 
 
 **RViz = Controlador das Juntas**
 
+![tp2](docs/rviz_control.jpg)
+
 ### 2. Lançar Gazebo para simular o mundo real, c/ RViz a controlar
+
+![tp3](docs/gazebo-and-ros-687x319.jpg)
 
 Se o passo anterior funcionou sem problemas, está na altura de testarmos num ambiente simulado:
 ````
@@ -71,6 +126,8 @@ Após lançar, é necessário dar-mos 'Play' ao Gazebo world, para que o RViz su
 *MotionPlanning > Joints* ou Arrastando diretamente (usando o rato) o marcador interativo presente no pulso do robô. 
 Após escolher a sua pose "destino" (a laranja), podemos mandar o manipulador planear a trajetória e executá-la:
 *MotionPlanning > Planning > Plan & Execute*.
+
+![tp4](docs/traj_planing.jpg)
 
 ### 3. Substituir o RViz pelo nosso próprio controlo personalizado
 Chegou o momento de colocarem mãos à obra!

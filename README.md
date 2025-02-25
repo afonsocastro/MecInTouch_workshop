@@ -1,19 +1,17 @@
-# MecInTouch_workshop
-## Table of Contents
+# MecInTouch Workshop Robótica
+## Índice
 
-1. [Prerequisites](#prerequisites)
-2. [Installation](#installation)
+1. [Pre-requisitos](#prerequisites)
+2. [Instalação](#installation)
 3. [Troubleshoot](#troubleshoot)
 
 
-## Prerequisites
-pre requisitos (windows 11 Home 64 bit)
-Instalar PyChamr community edition (https://www.jetbrains.com/pycharm/download/?section=windows) é preciso fazer scroll down
-Configurar WSL2
-Download Ubuntu 20.04.2 LTS
+## Pre-requisitos
+
 Entrar no ubuntu (definir user e password)
 
-## Installation
+## Instalação
+No terminal Ubuntu (Linux), correr cada um dos seguintes commandos, um a um:
 ```
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt install curl
@@ -23,10 +21,10 @@ sudo apt install ros-noetic-desktop-full
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+sudo apt-get install dos2unix
 sudo rosdep init
 rosdep update
 sudo apt install ros-noetic-moveit ros-noetic-industrial-robot-status-interface ros-noetic-scaled-controllers ros-noetic-pass-through-controllers ros-noetic-ur-client-library ros-noetic-ur-msgs ros-noetic-velocity-controllers ros-noetic-force-torque-sensor-controller socat
-sudo apt-get install xterm
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 catkin_make 
@@ -35,13 +33,12 @@ echo "export LIBGL_ALWAYS_SOFTWARE=1" >> ~/.bashrc
 echo "export LIBGL_ALWAYS_INDIRECT=0" >> ~/.bashrc 
 source ~/.bashrc
 ```
-Close Ubuntu (Linux) terminal: ``exit``
-Reopen Ubuntu (Linux) terminal.
+Fechar o terminal Ubuntu (Linux): ``exit``
 
-```echo $ROS_PACKAGE_PATH```
-
-It should return something like this: /home/youruser/catkin_ws/src:/opt/ros/noetic/share
-ITS NOT RETURNING!!!!
+Re-abrir o terminal Ubuntu (Linux), e correr o comando:
+```echo $ROS_PACKAGE_PATH``` que deve retornar o seguinte path:
+```/home/[your_user]/catkin_ws/src:/opt/ros/noetic/share``` . 
+Se sim, então pode-se executar os seguintes 4 comandos:
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/afonsocastro/MecInTouch_workshop.git
@@ -50,36 +47,15 @@ catkin_make
 ```
 
 # Troubleshoot
-if 
-```
-[ INFO] [1739396956.584309934]: Initializing urdriver 
-/usr/bin/env: ‘python3\r’: No such file or directory 
-[gripper_action_server-9] process has died [pid 42678, exit code 127
-```
+Cada novo script python criado deve conter SEMPRE, na sua primeira linha: ```#!/usr/bin/env python3```. 
+Para além disso, antes de poder ser executado (principalmente quando se inicializa um novo ROS Node), necessita das 2 seguintes permissões:
 
-you should 
 ```
-sudo apt-get install dos2unix
-dos2unix /home/afonsocastro/catkin_ws/src/larcc_drivers/gripper_action_server/src/gripper_action_server_node.py
+chmod 777 [file_name].py
+dos2unix [file_name].py
 ```
-and verify the shebang line of the file:
-```
-#!/usr/bin/env python3
-```
-Lastly:
-```
-chmod +x /home/afonsocastro/catkin_ws/src/larcc_drivers/gripper_action_server/src/gripper_action_server_node.py
-cd /home/afonsocastro/catkin_ws
-catkin_make
-source devel/setup.bash
-```
+Após estes 2 comandos, já se pode lançar o novo ROS Node (python script):
 
-OTHER thing, maybe you should be looking for this:
 ```
-sudo ip route add 192.168.56.0/24 via 172.19.96.1
-```
-and then see ```ip route```
-this should always be working
-```
-ping 192.168.56.2
+rosrun [package_name] [file_name].py
 ```

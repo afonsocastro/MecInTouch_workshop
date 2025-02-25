@@ -60,6 +60,16 @@ Visualization Manager:
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
+        FT_sensor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FT_sensor_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         Link Tree Style: Links in Alphabetic Order
         base:
           Alpha: 1
@@ -74,6 +84,42 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        bigbeam1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        bigbeam2_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_right_depth_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_right_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_right_rgb_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_top_depth_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_top_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_top_rgb_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         flange:
           Alpha: 1
           Show Axes: false
@@ -83,7 +129,123 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        gantry_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        leg1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg1_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg1_table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg2_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg2_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg2_table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg3_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg3_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg3_table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg4_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg4_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg4_table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rectangularbeam1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rectangularbeam2_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rectangularbeam3_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         shoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        smallbeam1_bigbeam1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        smallbeam2_bigbeam1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        table_beam:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        tabletop_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tabletop_table_front:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -93,6 +255,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
         upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wood_block:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -150,7 +317,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.6245503425598145
+      Distance: 5.319642066955566
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -158,17 +325,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 0.25279000401496887
+        Y: 0.4854099750518799
+        Z: 0.7955591082572937
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4303981363773346
+      Pitch: 0.09039783477783203
       Target Frame: <Fixed Frame>
-      Yaw: 2.1685831546783447
+      Yaw: 5.203585147857666
     Saved: ~
 Window Geometry:
   Displays:
@@ -186,5 +353,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1908
-  X: 0
-  Y: 0
+  X: -32
+  Y: -32

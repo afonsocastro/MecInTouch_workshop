@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /MotionPlanning1
       Splitter Ratio: 0.5175438523292542
     Tree Height: 358
   - Class: rviz/Help
@@ -148,6 +147,31 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          left_inner_finger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_inner_finger_pad:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_inner_knuckle:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_outer_finger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_outer_knuckle:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           leg1_gantry:
             Alpha: 1
             Show Axes: false
@@ -223,6 +247,36 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          right_inner_finger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_inner_finger_pad:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_inner_knuckle:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_outer_finger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_outer_knuckle:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          robotiq_arg2f_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           shoulder_link:
             Alpha: 1
             Show Axes: false
@@ -242,11 +296,6 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          table_beam:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           table_front:
             Alpha: 1
             Show Axes: false
@@ -266,6 +315,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
           upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wood_block:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -411,6 +465,31 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          left_inner_finger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_inner_finger_pad:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_inner_knuckle:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_outer_finger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_outer_knuckle:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           leg1_gantry:
             Alpha: 1
             Show Axes: false
@@ -486,6 +565,36 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          right_inner_finger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_inner_finger_pad:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_inner_knuckle:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_outer_finger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_outer_knuckle:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          robotiq_arg2f_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           shoulder_link:
             Alpha: 1
             Show Axes: false
@@ -505,11 +614,6 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          table_beam:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           table_front:
             Alpha: 1
             Show Axes: false
@@ -529,6 +633,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
           upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wood_block:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -557,6 +666,294 @@ Visualization Manager:
         Show Robot Visual: true
       Value: true
       Velocity_Scaling_Factor: 1
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        FT_sensor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FT_sensor_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_link_inertia:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        bigbeam1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        bigbeam2_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_right_depth_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_right_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_right_rgb_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_top_depth_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_top_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_top_rgb_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        flange:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        forearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        gantry_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        left_inner_finger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_inner_finger_pad:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_inner_knuckle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_outer_finger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_outer_knuckle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg1_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg1_table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg2_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg2_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg2_table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg3_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg3_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg3_table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg4_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg4_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg4_table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rectangularbeam1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rectangularbeam2_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rectangularbeam3_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_inner_finger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_inner_finger_pad:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_inner_knuckle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_outer_finger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_outer_knuckle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robotiq_arg2f_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        shoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        smallbeam1_bigbeam1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        smallbeam2_bigbeam1_gantry:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        tabletop_table_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tabletop_table_front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tool0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wood_block:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wrist_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_3_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
   Enabled: true
   Global Options:
     Background Color: 217; 217; 217

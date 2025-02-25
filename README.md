@@ -1,8 +1,9 @@
 # MecInTouch Workshop Robótica
 ## Índice
 
-1. [Pre-requisitos](#prerequisites)
-2. [Instalação](#installation)
+1. [Pre-requisitos](#pre-requisitos)
+2. [Instalação](#instalação)
+3. [Pôr o UR10e a mexer!](#pôr-o-ur10e-a-mexer)   
 3. [Troubleshoot](#troubleshoot)
 
 
@@ -46,7 +47,65 @@ cd ~/catkin_ws/
 catkin_make
 ```
 
-# Troubleshoot
+## Pôr o UR10e a mexer!
+### 1. Lançar o RViz para controlar as 6 juntas do Manipulador, através da interface:
+````
+roslaunch scripts rviz_larcc.launch
+````
+Para melhor entendermos todo o sistema, devemos saber que o RViz é o controlador do robô (atuador nos motores elétricos das várias juntas, que o fazem mexer). 
+
+**RViz = Controlador das Juntas**
+
+### 2. Lançar Gazebo para simular o mundo real, c/ RViz a controlar
+
+Se o passo anterior funcionou sem problemas, está na altura de testarmos num ambiente simulado:
+````
+roslaunch scripts spawn_ur10e_eff_controller.launch
+````
+Este comando lança o Gazebo. O Gazebo é o simulador do mundo real, isto é, não controla o robô: sofre das alterações que podem ser provocadas atrás do RViz.
+
+**Gazebo = simulador do mundo real**
+
+Após lançar, é necessário dar-mos 'Play' ao Gazebo world, para que o RViz surja e nos permita controlar o robô.
+É possível controlar o robô de duas formas: 
+*MotionPlanning > Joints* ou Arrastando diretamente (usando o rato) o marcador interativo presente no pulso do robô. 
+Após escolher a sua pose "destino" (a laranja), podemos mandar o manipulador planear a trajetória e executá-la:
+*MotionPlanning > Planning > Plan & Execute*.
+
+### 3. Substituir o RViz pelo nosso próprio controlo personalizado
+Chegou o momento de colocarem mãos à obra!
+O objetivo da primeira tarefa de hoje é criarem um script em Python, para controlar o manipulador UR10e, substituindo assim o RViz.
+Para tal, têm um exemplo de rascunho em ```scripts/src/example.py```.
+
+Devem usar as funções que estão disponíveis para comandar o robô, bem como a sua garra.
+Podem fazer o que quiserem: 
+- fazer o robô andar em ciclos repetitivos sem fim;
+- deslocar-se até uma posição acima de um objeto para depois baixar e o apanhar;
+- fazer o robô dançar;
+- fazer o robô lançar alguma peça;
+- etc
+
+Para tal, deverão usar o que sabem já de programação em python: condições if, ciclos while ou for, tudo está ao vosso dispôr.
+Dica: se quiserem saber valores de juntas de uma determinada posição, podem lançar os 2 comandos anterior que abrem o rviz e vos permitem explorar à vontade!
+
+Para irem testando como está o processo do vosso script, basta lançarem o Gazebo:
+````
+roslaunch scripts spawn_ur10e_eff_controller.launch open_rviz:=false
+````
+Dar play ao Gazebo, e, num novo terminal:
+````
+rosrun scripts [file_name].py
+````
+
+### 4. Testar no Robô Real
+
+Quando o vosso script da tarefa anterior estiver pronto (e funcional), poderão dar upload do mesmo para a seguinte pasta:
+https://drive.google.com/drive/folders/13MzDoU4itSrZIgErhY2RknKAz8FXpnGy?usp=drive_link
+
+Vamos testá-lo no robô real!
+
+Nota: devem procurar pelo vosso script em ```Linux/Ubuntu-20.04/home/[user_name]/catkin_ws/src/MecInTouch_workshop/scripts/src```
+## Troubleshoot
 Cada novo script python criado deve conter SEMPRE, na sua primeira linha: ```#!/usr/bin/env python3```. 
 Para além disso, antes de poder ser executado (principalmente quando se inicializa um novo ROS Node), necessita das 2 seguintes permissões:
 

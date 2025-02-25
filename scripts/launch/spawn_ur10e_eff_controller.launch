@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
 <launch>
+    <arg name="open_rviz" default="true" />
 
     <!-- Associate to the robot description parameter, the urdf file that model the robot-->
     <param name="robot_description" command = "$(find xacro)/xacro --inorder $(find scripts)/urdf/ur10e.xacro" />
@@ -44,7 +45,7 @@
         <arg name="publish_monitored_planning_scene" value="true" />
     </include>
 
-    <include file= "$(find ur10e_moveit_config)/launch/moveit_rviz.launch">
+    <include if="$(arg open_rviz)" file="$(find ur10e_moveit_config)/launch/moveit_rviz.launch">
     </include>
 
 </launch>

@@ -180,5 +180,5 @@ dos2unix [file_name].py
 Após estes 2 comandos, já se pode lançar o novo ROS Node (python script):
 
 ```
-rosrun [package_name] [file_name].py
+rosrun scripts [file_name].py
 ```

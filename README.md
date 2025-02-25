@@ -1,5 +1,6 @@
 # MecInTouch Workshop Robótica
-![tp0](docs/ur10e.webp)
+
+<img align="right" width="250" height="250" src="docs/ur10e.webp">
 
 ## Índice
 
@@ -98,10 +99,11 @@ Lista dos comandos mais habituais para navegar através do terminal:
 
 ## Pôr o UR10e a mexer!
 ### 1. Lançar o RViz para controlar as 6 juntas do Manipulador, através da interface:
+<img align="left" width="90" height="48" src="docs/rviz_logo.png">
+
 ````
 roslaunch scripts rviz_larcc.launch
 ````
-![tp1](docs/rviz_logo.png)
 
 Para melhor entendermos todo o sistema, devemos saber que o RViz é o controlador do robô (atuador nos motores elétricos das várias juntas, que o fazem mexer). 
 
@@ -111,9 +113,12 @@ Para melhor entendermos todo o sistema, devemos saber que o RViz é o controlado
 
 ### 2. Lançar Gazebo para simular o mundo real, c/ RViz a controlar
 
-![tp3](docs/gazebo-and-ros-687x319.jpg)
+[//]: # (![tp3]&#40;docs/gazebo-and-ros-687x319.jpg&#41;)
 
 Se o passo anterior funcionou sem problemas, está na altura de testarmos num ambiente simulado:
+
+<img align="left" width="100" height="48" src="docs/gazebo-and-ros-687x319.jpg">
+
 ````
 roslaunch scripts spawn_ur10e_eff_controller.launch
 ````
